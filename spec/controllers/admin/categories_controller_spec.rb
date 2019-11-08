@@ -72,7 +72,7 @@ describe Admin::CategoriesController do
     end
 
     it 'should create valid category' do
-      post :new, :category => {:name => 'sample-cat', :keywords => 'sample-keyword', :permalink => 'some perma', :description => 'Sample Desc'}
+      post :new, :category => {:name => 'test', :keywords => 'testkey', :permalink => 'testperma', :description => 'testdec'}
       assert_response :redirect, :action => 'index'
       assigns(:categories).should_not be_nil
       expect(flash[:notice]).to eq("Category was successfully saved.")
